@@ -2,7 +2,7 @@ export default function LoginRight() {
   return (
     <div className="hidden lg:flex flex-col justify-center space-y-6">
 
-      {/* IMAGE CARD */}
+     {/* IMAGE CARD */}
       <div className="rounded-3xl overflow-hidden shadow-xl bg-white">
         <img
           src="/swapAI.png"

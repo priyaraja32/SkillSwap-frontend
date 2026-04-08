@@ -5,7 +5,7 @@ const ai = new GoogleGenAI({
   apiKey: import.meta.env.VITE_GEMINI_API_KEY,
 });
 
-// ── aiMatchUsers — search based matching ──
+//  aiMatchUsers — search based matching 
 export async function aiMatchUsers(search, users) {
   if (!search || !Array.isArray(users) || users.length === 0) {
     return [];
@@ -207,7 +207,7 @@ Rules:
 
   try {
     const res = await ai.models.generateContent({
-      model: "gemini-2.0-flash", // ✅ FIXED
+      model: "gemini-2.0-flash",
       contents: [{ role: "user", parts: [{ text: prompt }] }],
       generationConfig: {
         temperature: 0.7,
@@ -225,7 +225,7 @@ Rules:
   }
 }
 
-// ── helpers ──
+//  helpers 
 function hasPartialLetterMatch(search, skills) {
   const letters = new Set(search.split(""));
   return skills.some((skill) => {

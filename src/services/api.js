@@ -11,26 +11,26 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-/* USERS */
+//auth
 export const fetchUsers = () => api.get("/users");
 
-/* SKILLS */
+//skills
 export const fetchSkills = () => api.get("/skills");
 export const addSkill = (data) => api.post("/skills", data);
 
-/* ACTIVITIES */
+//activities
 export const fetchActivities = () => api.get("/activities");
 
-/* MESSAGES — NEW */
+//messages
 export const fetchConversations = () => api.get("/messages");
 export const fetchConversation = (userId) => api.get(`/messages/${userId}`);
 export const sendMessage = (receiver, text) => api.post("/messages", { receiver, text });
 export const suggestMessages = (context) => api.post("/messages/suggest", { context });
 
-/* AVAILABILITY — NEW */
+//availability
 export const saveAvailability = (availability) => api.put("/availability", { availability });
 export const fetchMatches = () => api.get("/availability/matches");
 
-/* shared instance */
+//reviews
 export const sheetApi = api;
 export default api;
